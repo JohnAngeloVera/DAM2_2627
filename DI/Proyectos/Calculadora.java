@@ -37,6 +37,12 @@ public class Calculadora {
                 }else if (opcion==2) {
                     resultado=num1-num2;
                     simbolo = "-";
+                }else if (opcion==3){
+                    resultado=0;
+                    simbolo = "*";
+                    for (int i = 0; i < Math.abs(num2); i++)resultado+=num1;
+                    if(num2<0)resultado=-resultado;
+                }
 
 
             }else System.out.println("Opcion no valida");
