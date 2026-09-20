@@ -50,7 +50,7 @@ public class Calculadora {
                     }
                     resultado = num1 / num2;
                 }
-
+                System.out.printf("%d %s %d = %d\n",num1,simbolo,num2,resultado);
 
             }else System.out.println("Opcion no valida");
             System.out.println();
