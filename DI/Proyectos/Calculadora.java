@@ -22,5 +22,16 @@ public class Calculadora {
         int opcion = 0;
         int resultado;
 
+        System.out.print(menu);
+
+        while (opcion!=5){
+            opcion = opcion();
+            if(opcion==5)break;
+            else if (opcion >= 1 && opcion <= 4) {
+
+            }else System.out.println("Opcion no valida");
+            System.out.println();
+        }
+
     }
 }
