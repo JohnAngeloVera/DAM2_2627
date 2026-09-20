@@ -31,6 +31,13 @@ public class Calculadora {
                 int num1= leerInt("NÚMERO 1: ");
                 int num2= leerInt("NÚMERO 2: ");
                 String simbolo="";
+                if(opcion==1){
+                    resultado=num1+num2;
+                    simbolo = "+";
+                }else if (opcion==2) {
+                    resultado=num1-num2;
+                    simbolo = "-";
+
 
             }else System.out.println("Opcion no valida");
             System.out.println();
