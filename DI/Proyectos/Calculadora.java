@@ -28,6 +28,9 @@ public class Calculadora {
             opcion = opcion();
             if(opcion==5)break;
             else if (opcion >= 1 && opcion <= 4) {
+                int num1= leerInt("NÚMERO 1: ");
+                int num2= leerInt("NÚMERO 2: ");
+                String simbolo="";
 
             }else System.out.println("Opcion no valida");
             System.out.println();
