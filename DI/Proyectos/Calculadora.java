@@ -42,6 +42,13 @@ public class Calculadora {
                     simbolo = "*";
                     for (int i = 0; i < Math.abs(num2); i++)resultado+=num1;
                     if(num2<0)resultado=-resultado;
+                }else{
+                    simbolo = "/";
+                    while (num2 == 0) {
+                        System.out.println("No se puede dividir entre 0.");
+                        num2 = leerInt("NÚMERO 2: ");
+                    }
+                    resultado = num1 / num2;
                 }
 
 
