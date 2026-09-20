@@ -35,11 +35,11 @@ public class Calculadora {
         System.out.print(menu);
 
         //Bucle que se mantendra mientras la opcion sea distinta a 5
-        while (opcion!=5){
+        while (opcion != 5){
             opcion = opcion();
 
             //Si la opcion es = 5 se sale y termina
-            if(opcion==5)break;
+            if(opcion == 5)break;
 
             //Este else if gestiona todas las opciones de operaciones
             else if (opcion >= 1 && opcion <= 4) {
@@ -50,19 +50,19 @@ public class Calculadora {
                 int num2= leerInt("NÚMERO 2: ");
 
                 //Variable que varia segun opcion
-                String simbolo="";
+                String simbolo = "";
 
-                if(opcion==1){//Opcion de suma
-                    resultado=num1+num2;
+                if(opcion == 1){//Opcion de suma
+                    resultado = num1 + num2;
                     simbolo = "+";
-                }else if (opcion==2) {//Opcion de resta
-                    resultado=num1-num2;
+                }else if (opcion == 2) {//Opcion de resta
+                    resultado = num1 - num2;
                     simbolo = "-";
-                }else if (opcion==3){//Opcion de multiplicacion con un bucle que obtiene el resultado mediante sumas y que permite un resultado negativo
-                    resultado=0;
+                }else if (opcion == 3){//Opcion de multiplicacion con un bucle que obtiene el resultado mediante sumas y que permite un resultado negativo
+                    resultado = 0;
                     simbolo = "*";
                     for (int i = 0; i < Math.abs(num2); i++)resultado+=num1;
-                    if(num2<0)resultado=-resultado;
+                    if(num2<0)resultado = -resultado;
                 }else{//Opcion de Division teniendo en cuenta que si el denominador es 0 no se pueda y te pida otro numero hasta que se cambie
                     simbolo = "/";
                     while (num2 == 0) {
