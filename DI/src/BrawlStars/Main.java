@@ -12,6 +12,29 @@ public class Main {
     public static void main(String[] args) {
         users.add(new Admin("admin", "admin123"));
         users.add(new Guest("guest", "guest123"));
+        while (true) {
+            showAccessMenu();
+            int opcion = option();
+            System.out.println();
+
+            if (opcion == 1) {
+                User user = login();
+
+                if (user == null) {
+                    System.out.println("Usuario o contraseña incorrectos.");
+                } else {
+                    user.showUserMenu();
+                }
+
+            } else if (opcion == 2) {
+                break;
+
+            } else {
+                System.out.println("Opcion no valida");
+            }
+
+            System.out.println();
+        }
     }
 }
 private static void showAccessMenu() {
