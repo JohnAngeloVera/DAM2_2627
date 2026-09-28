@@ -40,3 +40,12 @@ public static String readName(String mensaje) {
     System.out.print(mensaje);
     return scanner.next();
 }
+public static void showBrawlers() {
+    if (brawlers.isEmpty()) {
+        System.out.println("Todavía no hay brawlers creados...");
+    } else {
+        for (Brawler brawler : brawlers) {
+            System.out.println(brawler);
+        }
+    }
+}
