@@ -10,6 +10,7 @@ public class Epic extends Brawler{
 
     @Override
     public void actionByCategory(Brawler enemy) {
-
+        increaseHealth(supply);
+        System.out.println(this + " Increase health to " + getHealth());
     }
 }
