@@ -19,4 +19,16 @@ public class Brawler {
     public void setHealth(int health) {
         this.health = health;
     }
+
+    public Brawler(String name, int health) {
+        this.name = name;
+        this.health = health;
+    }
+
+    public void increaseHealth(int supply){
+        this.health+=supply;
+    }
+    public void reduceHealth(int damage){
+        this.health-=damage;
+    }
 }
