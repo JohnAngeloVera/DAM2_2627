@@ -49,3 +49,18 @@ public static void showBrawlers() {
         }
     }
 }
+public static void createLegend() {
+    String name = readName("Nombre: ");
+    int health = readInt("Vida: ");
+    int damage = readInt("Daño: ");
+
+    brawlers.add(new Legendary(name, health, damage));
+}
+
+public static void createEpic() {
+    String name = readName("Nombre: ");
+    int health = readInt("Vida: ");
+    int supply = readInt("Suministros: ");
+
+    brawlers.add(new Epic(name, health, supply));
+}
