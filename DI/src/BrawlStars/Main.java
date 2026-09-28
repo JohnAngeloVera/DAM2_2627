@@ -27,3 +27,16 @@ private static User login() {
 
     return null;
 }
+public static int option() {
+    return readInt("OPCION: ");
+}
+
+public static int readInt(String mensaje) {
+    System.out.print(mensaje);
+    return scanner.nextInt();
+}
+
+public static String readName(String mensaje) {
+    System.out.print(mensaje);
+    return scanner.next();
+}
