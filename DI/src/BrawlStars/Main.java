@@ -8,6 +8,11 @@ public class Main {
     private static final ArrayList<Brawler> brawlers = new ArrayList<>();
     private static final ArrayList<User> users = new ArrayList<>();
     private static final Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        users.add(new Admin("admin", "admin123"));
+        users.add(new Guest("guest", "guest123"));
+    }
 }
 private static void showAccessMenu() {
     System.out.println("1. Iniciar sesión");
