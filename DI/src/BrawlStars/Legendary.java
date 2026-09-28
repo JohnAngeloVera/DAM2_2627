@@ -10,6 +10,7 @@ public class Legendary extends Brawler {
 
     @Override
     public void actionByCategory(Brawler enemy) {
-
+        enemy.reduceHealth(damage);
+        System.out.println(this + " Apply -" + damage + " damage to " + enemy.getName());
     }
 }
