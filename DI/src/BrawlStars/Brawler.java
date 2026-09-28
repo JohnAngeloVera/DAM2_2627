@@ -1,6 +1,6 @@
 package BrawlStars;
 
-public class Brawler {
+public abstract class Brawler {
     private String name;
     private int health;
 
@@ -31,4 +31,10 @@ public class Brawler {
     public void reduceHealth(int damage){
         this.health-=damage;
     }
+    @Override
+    public String toString() {
+        return "[" + name + ":" + health + "]";
+    }
+
+    public abstract void actionByCategory(Brawler enemy);
 }
