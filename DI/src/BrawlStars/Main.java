@@ -64,3 +64,36 @@ public static void createEpic() {
 
     brawlers.add(new Epic(name, health, supply));
 }
+private static Brawler searchBrawler(String name) {
+    for (Brawler brawler : brawlers) {
+        if (brawler.getName().equals(name)) {
+            return brawler;
+        }
+    }
+
+    return null;
+}
+
+public static void fight() {
+    String name1 = readName("Nombre del brawler 1: ");
+    String name2 = readName("Nombre del brawler 2: ");
+
+    Brawler brawler1 = searchBrawler(name1);
+    Brawler brawler2 = searchBrawler(name2);
+
+    if (brawler1 == null || brawler2 == null) {
+        System.out.println("Uno de los brawlers no se ha encontrado...");
+        return;
+    }
+
+    System.out.println(brawler1);
+    System.out.println(brawler2);
+    System.out.println();
+
+    brawler1.actionByCategory(brawler2);
+    System.out.println(brawler2);
+    System.out.println();
+
+    brawler2.actionByCategory(brawler1);
+    System.out.println(brawler1);
+}
